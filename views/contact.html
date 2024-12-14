@@ -1,0 +1,23 @@
+ <div class="main-container">
+        <section class="info-section">
+         <h2 style="color:white">Contact {{company_name}}</h2>
+         <p>
+             Please feel free to reach us by email, phone, or the form on the right.  Thanks for your inquiry, and we look forward to working with you.
+         </p>
+        </section>
+        <div class="contact-form-container">
+            <h2>Contact Us</h2>
+         <form action="mailto:{{company_email}}" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>

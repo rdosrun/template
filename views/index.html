@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{company_name}}</title>
+         <link rel="stylesheet"  type="text/css" href="/style/style.css">
+         <link rel="stylesheet"  type="text/css" href="/style/headerbar.css">
+        <link  rel="stylesheet"  type="text/css" href="/style/aboutus.css">
+         <link rel="stylesheet"  type="text/css" href="/style/footer.css">
+         <link rel="stylesheet"  type="text/css" href="/style/nav.css">
+        <link  rel="stylesheet"  type="text/css" href="/style/store.css">
+        <script src="/script/page_route.js"></script>
+    </head>
+<body>
+    <!-- Header Bar -->
+    <headerbar class="header-bar">
+    <div class="logo">
+    </div>
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <nav class="nav-links">
+      <ul>
+        <li><button class="nav-btn" onclick="loadPage('/views/landing')">Home</button></li>
+        <li><button class="nav-btn" onclick="loadPage('/views/services')">Services</button></li>
+        <li><button class="nav-btn" onclick="loadPage('/views/credit')">Credit Reporting</button></li>
+        <li><button class="nav-btn" onclick="loadPage('/views/FAQ')">FAQ</button></li>
+        <li><button class="nav-btn" onclick="loadPage('/views/Pricing')">Pricing and Fees</button></li>
+        <li><button class="nav-btn" onclick="loadPage('/views/contact')">Contact</button></li>
+        </ul>
+    </nav>
+  </headerbar>
+  <!-- Main Page -->
+  <!-- Hero Section -->
+  <div id="main-page">
+    <header class="hero-section">
+    <div class="hero-content">
+    <h1>Welcome to {{company_name}}</h1>
+    <p>{{company_description}}</p>
+      <a onclick="loadPage('/views/contact')" class="cta-btn">Contact Us</a>
+    </div>
+  </header>
+    </div>
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 {{company_name}}. All rights reserved.</p>
+            <p>Follow us on <a href="{{linkedin}">Linkedin</a> | <a href="{{facebook}">Facebook</a></p>
+  </footer>
+</body>
+</html>
+<script>
+function toggleSidebar() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}
+</script>
+<script src="/script/script.js"></script>
+<script src="/script/image_route.js"></script>
+<script src="/script/store.js"></script>
